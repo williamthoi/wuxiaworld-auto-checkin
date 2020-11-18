@@ -6,8 +6,7 @@ const FILES: string[] = [
   'manifest.json',
   'dist/src/index.js',
   'dist/src/auto-checkin.js',
-  'resources/logo.png',
-  'resources/logo.svg',
+  'resources/logo.png'
 ];
 
 function run() {
