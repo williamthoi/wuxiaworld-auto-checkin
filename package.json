@@ -1,0 +1,17 @@
+{
+  "name": "wuxiaworld-auto-checkin",
+  "version": "0.1.0",
+  "description": "Auto-CheckIn to WuxiaWorld",
+  "repository": "https://github.com/williamthoi/wuxiaworld-auto-checkin",
+  "author": "William Thoi",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "@types/node": "^12.7.5",
+    "node-zip": "^1.1.1",
+    "typescript": "^3.6.3"
+  }
+}
