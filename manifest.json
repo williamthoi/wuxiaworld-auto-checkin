@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "WuxiaWorld Auto-CheckIn",
   "description": "Auto-CheckIn to WuxiaWorld",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage_url": "https://github.com/williamthoi/wuxiaworld-auto-checkin",
   "icons": {
     "16": "resources/logo.png",

@@ -13,6 +13,9 @@
   "devDependencies": {
     "@types/node": "^12.7.5",
     "node-zip": "^1.1.1",
-    "typescript": "^3.6.3"
+    "typescript": "^2.1.6"
+  },
+  "dependencies": {
+    "@babel/plugin-transform-modules-commonjs": "^7.12.1"
   }
 }
