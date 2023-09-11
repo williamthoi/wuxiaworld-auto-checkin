@@ -1,8 +1,8 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
   "name": "WuxiaWorld Auto-CheckIn",
   "description": "Auto-CheckIn to WuxiaWorld",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "homepage_url": "https://github.com/williamthoi/wuxiaworld-auto-checkin",
   "icons": {
     "16": "resources/logo.png",
@@ -10,7 +10,10 @@
     "96": "resources/logo.png",
     "128": "resources/logo.png"
   },
-  "web_accessible_resources": [
+  "permissions": [
+    "activeTab"
+  ],
+  "background": [
     "dist/src/auto-checkin.js"
   ],
   "content_scripts": [
