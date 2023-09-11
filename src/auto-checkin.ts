@@ -1,48 +1,34 @@
 (function() {
-  function clickcheckin() {
-    const interactiveElement = document.getElementById(
-      'submitLoginMission'
-    );
-    
-    const disabled = document.getElementsByClassName(
-      'disabled'
-    );
+  function clickButton() {
 
-    const karmaAmount = document.getElementsByClassName(
-      'karma-amount'
-    );
-    let enabled = true;
-
-    for (let i = 0; i < disabled.length; i++) {
-      if (disabled.item(i).id == 'submitLoginMission') {
-        enabled = false;
-        console.log("Check-in button disabled");
-      }
-    }
-
-    console.log(karmaAmount);
-
-    if (enabled && karmaAmount.length != 0) {
-      if (!karmaAmount[0].innerHTML.includes("<span>3000</span>")) {
-        if (interactiveElement !== null) {
-          interactiveElement.click();
-          console.log("Karma points added");
-        }
-      } else {
-        console.log("Karma full");
-      }
-    }
-  }
-
-  function start() {
     console.log("Looking for check-in button");
-    clickcheckin();
+
+    const buttons: NodeListOf<HTMLButtonElement> = document.querySelectorAll('button:enabled');
+
+    buttons.forEach((button) => {
+      if (button.textContent === 'COMPLETED' && !button.disabled) {
+        console.log("Completed adding karma");
+        return;
+      }
+
+      if (button.textContent === 'COMPLETE' && !button.disabled) {
+        button.click();
+        console.log("Karma points added");
+        return;
+      }
+    });
+
   }
 
-  document.addEventListener("DOMSubtreeModified", function(event){
-    start();
-  });
+  const observer = new MutationObserver(clickButton);
 
+  // Configure the observer to watch for subtree changes (e.g., dynamic button additions)
+  const observerConfig = { childList: true, subtree: true };
+  
+  // Start observing the DOM for changes
+  observer.observe(document.body, observerConfig);
+  
+  clickButton();
   console.log('WuxiaWorld Auto-checkin');
 })();
 
