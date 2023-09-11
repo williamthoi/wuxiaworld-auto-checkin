@@ -10,9 +10,6 @@
     "96": "resources/logo.png",
     "128": "resources/logo.png"
   },
-  "permissions": [
-    "activeTab"
-  ],
   "background": [
     "dist/src/auto-checkin.js"
   ],
